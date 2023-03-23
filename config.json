@@ -1,0 +1,45 @@
+{
+    "title": "medicines concentration",
+    "time_step": 0.1,
+    "medicines": [
+      {
+        "name": "CPA(Just for fun)",
+        "half_life": 80,
+        "dose": 0.0,
+        "time": [
+            
+            {
+                "hour": 23,
+                "minute": 35
+            }
+        ],
+        "peak_time": 2,
+        "peak_concentration": 6.25
+      },
+      {
+        "name": "E2",
+        "half_life": 10.0,
+        "dose": 0.0,
+        "time": [
+            {
+                "hour": 7,
+                "minute": 30
+            },
+            {
+                "hour": 12,
+                "minute": 45
+            },
+            {
+                "hour": 18,
+                "minute": 10
+            },
+            {
+                "hour": 23,
+                "minute": 20
+            }
+        ],
+        "peak_time": 3,
+        "peak_concentration": 50
+      }      
+    ]
+  }
