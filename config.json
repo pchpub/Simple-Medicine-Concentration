@@ -5,41 +5,44 @@
       {
         "name": "CPA(Just for fun)",
         "half_life": 80,
-        "dose": 0.0,
-        "time": [
+        "time_and_dose": [
             
             {
-                "hour": 23,
-                "minute": 35
+                "hour": 7,
+                "minute": 30,
+                "dose": 6.25
             }
         ],
         "peak_time": 2,
-        "peak_concentration": 6.25
+        "peak_concentration": 1
       },
       {
         "name": "E2",
         "half_life": 10.0,
-        "dose": 0.0,
-        "time": [
+        "time_and_dose": [
             {
                 "hour": 7,
-                "minute": 30
+                "minute": 0,
+                "dose": 0.5
             },
             {
                 "hour": 12,
-                "minute": 45
+                "minute": 35,
+                "dose": 1.5
             },
             {
                 "hour": 18,
-                "minute": 10
+                "minute": 10,
+                "dose": 0.5
             },
             {
                 "hour": 23,
-                "minute": 20
+                "minute": 20,
+                "dose": 0.5
             }
         ],
         "peak_time": 3,
-        "peak_concentration": 50
+        "peak_concentration": 100
       }      
     ]
   }
