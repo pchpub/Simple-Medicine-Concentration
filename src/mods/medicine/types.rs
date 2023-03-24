@@ -1,7 +1,5 @@
 use serde::{Serialize, Deserialize};
 
-use crate::mods::types::Time;
-
 pub struct Time2Concentration {
     pub time_start: f64,
     pub time_end: f64,
@@ -46,13 +44,13 @@ pub struct SingleMedicine {
     pub name: String,
     // 半衰期
     pub half_life: f64,
-    // 单次服用量
-    pub dose: f64,
-    // 服用时间
-    pub time: Vec<Time>,
+    // 服用时间和服用的量
+    pub time_and_dose: Vec<TimeAndDose>,
     // 药物达到峰值的时间
     pub peak_time: f64,
-    // 药物达到峰值的浓度
+    // 单位药物
+    // pub dose: f64,
+    // 单位药物达到峰值的浓度
     pub peak_concentration: f64,
 }
 
@@ -61,10 +59,27 @@ impl Default for SingleMedicine {
         Self {
             name: "药物".to_string(),
             half_life: 0.0,
-            dose: 0.0,
-            time: vec![],
+            // dose: 0.0,
+            time_and_dose: vec![],
             peak_time: 0.0,
             peak_concentration: 0.0,
+        }
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct TimeAndDose {
+    pub hour: u8,
+    pub minute: u8,
+    pub dose: f64,
+}
+
+impl Default for TimeAndDose {
+    fn default() -> Self {
+        Self {
+            hour: 0,
+            minute: 0,
+            dose: 0.0,
         }
     }
 }
